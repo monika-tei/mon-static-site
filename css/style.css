@@ -1,0 +1,218 @@
+/*for creating layout throughout the site*/
+:root {
+  --background-color-hover: #e9cdbf;
+  --text-decoration-color: #cc9ec2;
+  --text-decoration-color-200: #e9cdbf;
+  --subtle-color: #d56295;
+  --discount-color: #d77922;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*come back to this one if you decide to create a webshop name or the top navigation*/
+.mainNav h1 {
+  display: inline-block;
+  margin-right: auto;
+}
+
+.mainNav > * {
+  margin: 0;
+}
+@media screen and (min-width: 700px) {
+  .mainNav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*CATEGOTY PAGE*/
+
+.brandList {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.brandList ol {
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+
+.brandList li {
+  border-bottom: 1px solid #d8d8d8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.brandList li:hover {
+  background: var(--background-color-hover);
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: var(--background-color-hover);
+}
+
+.brandList a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+/*makes two columns or more, can play with this*/
+@media screen and (min-width: 800px) {
+  .brandList ol {
+    column-count: 3;
+  }
+}
+/*jeigu bus laiko- padaryti smooth transition spalvos on hover*/
+
+/*PRODUCT LIST*/
+
+.productlist main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*from one end to another, -1*/
+/* .productlist main {
+} */
+.productlist main h2 {
+  grid-column: 1/-1;
+}
+
+.productlist article h3 {
+  font-size: 1.1rem;
+  flex-grow: 3;
+}
+
+.productlist article > * {
+  margin: 0;
+  border: 1px dotted var(--text-decoration-color);
+  font-size: 0.9rem;
+}
+
+.subtle {
+  color: var(--subtle-color);
+}
+.productlist article {
+  display: flex;
+  flex-direction: column;
+}
+
+.productlist article.soldOut img {
+  opacity: 0.4;
+}
+
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: yellow;
+  color: black;
+  padding: 1rem;
+}
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+.discounted > p {
+  margin-bottom: 0;
+}
+.productlist article.onSale .price span {
+  display: initial;
+}
+.productlist article button {
+  margin-bottom: auto;
+}
+.productlist article {
+  margin-bottom: 1.5rem;
+}
+.discounted p:last-child {
+  background: var(--discount-color);
+  padding: 0.1rem;
+}
+
+/*INDIVIDUAL PRODUCT PAGE*/
+
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+  font-size: 1rem;
+}
+
+.mainNav {
+  padding: 1rem;
+}
+
+header,
+main ol {
+  padding: 1rem;
+}
+
+.productimage {
+  padding: 1rem;
+  /* max-width: max-content; */
+}
+
+.breadcrumbs li::after {
+  display: inline-block;
+  width: 35px;
+  height: 10px;
+  margin: 0 10px;
+  content: "";
+}
+
+.purchaseBox {
+  /*can add bg color if needed*/
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+.purchaseBox form label {
+  gap: 1rem;
+}
+
+.purchaseBox button {
+  margin-top: 2rem;
+  display: block;
+  /* width: auto; */
+}
+
+.info {
+  padding: 1rem;
+}
+.product select {
+  min-width: 80px;
+}
+.product main {
+  display: grid;
+}
+.product main .breadcrumbs,
+.product main img {
+  grid-column: 1/-1;
+}
+
+dt {
+  font-weight: bold;
+}
+@media screen and (min-width: 1000px) {
+  .product main {
+    grid-template-columns: 1fr 400px;
+  }
+  /* .info {
+    order: 0;
+  } */
+  .purchaseBox {
+    order: 2;
+    transform: translate(-50px, -100px);
+    border: 5px dotted var(--text-decoration-color-200);
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Product</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body class="product">
+    <header>
+      <h1>Webshop Title</h1>
+    </header>
+    <main>
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Brands</a></li>
+        <li class="brand"><a href="productlist.html">Product List</a>Nike</li>
+        <li class="productname">Sahara Team India Fanwear Round Neck Jersey</li>
+      </ol>
+      <img
+        class="productimage"
+        src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp"
+        alt="Sahara Team India Fanwear Round Neck Jersey"
+      />
+      <section class="purchaseBox">
+        <template class="templatePurchase">
+          <h3 class="itemBrand">Sahara Team India Fanwear Round Neck Jersey</h3>
+          <p class="itemDetails">Nike | Tshirts</p>
+          <form>
+            <label>
+              Choose a size
+              <select name="size">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </label>
+            <button>Add to Basket</button>
+          </form>
+        </template>
+      </section>
+
+      <section class="info">
+        <template class="templateInfo">
+          <h2>Product Information</h2>
+          <dl>
+            <dt>Model Name</dt>
+            <dd class="modelName">
+              Sahara Team India Fanwear Round Neck Jersey
+            </dd>
+            <dt>Color</dt>
+            <dd class="itemColor">Blue</dd>
+            <dt>Inventory number</dt>
+            <dd class="itemId">1163</dd>
+          </dl>
+          <h1 class="itemBrand">Nike</h1>
+          <p class="brandBio">creating experiences for today’s athlete</p>
+        </template>
+      </section>
+    </main>
+    <script src="js/product.js"></script>
+  </body>
+</html>
