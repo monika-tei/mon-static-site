@@ -1,2 +1,2 @@
-### mon-static-site
-###### mini-project for MMD 2nd semester
+### Static page assignment
+#### first mini-project for MMD 2nd semester
